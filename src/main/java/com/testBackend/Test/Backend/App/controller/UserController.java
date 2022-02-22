@@ -17,22 +17,24 @@ public class UserController {
     @Autowired
     private UserService userService;
 
+
     @GetMapping("/getUsers")
-    public List<UserDTO> getUsers(){
+    public List<UserDTO> getUsers() {
         return userService.getAllUsers();
     }
 
     @PostMapping("/saveUser")
-    public UserDTO saveUser(@RequestBody UserDTO userDTO){
+    public UserDTO saveUser(@RequestBody UserDTO userDTO) {
         return userService.saveUser(userDTO);
     }
 
     @PutMapping("/updateUser")
-    public String updateUser(){
+    public String updateUser() {
         return "User Updated";
     }
+
     @DeleteMapping("/deleteUser")
-    public String deleteUser(){
+    public String deleteUser() {
         return "User Deleted";
     }
 }

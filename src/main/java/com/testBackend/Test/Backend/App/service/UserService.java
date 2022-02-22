@@ -1,6 +1,5 @@
 package com.testBackend.Test.Backend.App.service;
 
-
 import com.testBackend.Test.Backend.App.dto.UserDTO;
 import com.testBackend.Test.Backend.App.entity.User;
 import com.testBackend.Test.Backend.App.repo.UserRepo;
@@ -28,9 +27,10 @@ public class UserService {
     }
 
 
-    public List<UserDTO> getAllUsers(){
+    public List<UserDTO> getAllUsers() {
         List<User> userList = userRepo.findAll();
-        return modelMapper.map(userList, new TypeToken<List<UserDTO>>(){}.getType());
+        return modelMapper.map(userList, new TypeToken<List<UserDTO>>() {
+        }.getType());
     }
 
 

@@ -11,11 +11,13 @@ import javax.persistence.Id;
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
-public class User {
+public class ShoppingCart {
     @Id
+    private String cartID;
+
     private String uID;
-    private String name;
-    private String email;
-    private String phoneNumber;
-    private String shippingAddress;
+    private String deliveryStatus;
+    private String deliveryAddress;
+    private String paymentStatus;
+
 }

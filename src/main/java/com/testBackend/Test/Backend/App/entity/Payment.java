@@ -11,11 +11,12 @@ import javax.persistence.Id;
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
-public class User {
+
+public class Payment {
     @Id
+    private String cardNumber;
     private String uID;
-    private String name;
-    private String email;
-    private String phoneNumber;
-    private String shippingAddress;
+    private String nameOnCard;
+    private String expireDate;
+    private String cvv;
 }
