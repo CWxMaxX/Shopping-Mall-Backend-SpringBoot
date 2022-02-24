@@ -12,6 +12,7 @@ public class PaymentDTO {
     private String cardNumber;
     private String uID;
     private String nameOnCard;
-    private String expireDate;
+    private String expireMonth;
+    private String expireYear;
     private String cvv;
 }

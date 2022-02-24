@@ -1,8 +1,6 @@
 package com.testBackend.Test.Backend.App.entity;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
@@ -10,13 +8,15 @@ import javax.persistence.Id;
 @Entity
 @NoArgsConstructor
 @AllArgsConstructor
-@Data
+@Getter
+@Setter
 
 public class Payment {
     @Id
     private String cardNumber;
     private String uID;
     private String nameOnCard;
-    private String expireDate;
+    private String expireMonth;
+    private String expireYear;
     private String cvv;
 }
