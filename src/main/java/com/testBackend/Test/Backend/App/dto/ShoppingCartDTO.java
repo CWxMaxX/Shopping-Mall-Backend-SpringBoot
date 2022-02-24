@@ -7,6 +7,15 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @Data
 
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@NoArgsConstructor
+@AllArgsConstructor
+@Data
+
 public class ShoppingCartDTO {
     private String cartID;
 
