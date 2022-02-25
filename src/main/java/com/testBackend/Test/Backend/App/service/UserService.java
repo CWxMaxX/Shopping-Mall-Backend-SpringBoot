@@ -10,6 +10,7 @@ import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
 import java.util.List;
+import java.util.Optional;
 
 @Service
 @Transactional
@@ -31,6 +32,10 @@ public class UserService {
         List<User> userList = userRepo.findAll();
         return modelMapper.map(userList, new TypeToken<List<UserDTO>>() {
         }.getType());
+    }
+
+    public Optional<User> getUserById(String uid){
+     return userRepo.findById(uid);
     }
 
 

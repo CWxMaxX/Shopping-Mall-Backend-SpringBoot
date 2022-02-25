@@ -15,7 +15,6 @@ public class PaymentService {
 
     public Payment savePayment(Payment payment){
         paymentRepo.save(payment);
-
         return payment;
     }
 
