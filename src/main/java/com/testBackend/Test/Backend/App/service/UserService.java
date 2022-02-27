@@ -35,7 +35,7 @@ public class UserService {
     }
 
     public Optional<User> getUserById(String uid){
-     return userRepo.findById(uid);
+        return userRepo.findById(uid);
     }
 
 

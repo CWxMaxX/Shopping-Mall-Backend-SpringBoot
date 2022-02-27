@@ -2,22 +2,20 @@ package com.testBackend.Test.Backend.App.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.*;
+import java.io.Serializable;
 
-
-@Entity
+@Data
 @NoArgsConstructor
 @AllArgsConstructor
-@Data
-public class ShoppingCart {
-    @Id
+@EqualsAndHashCode
+
+public class ShoppingCartContainsPK implements Serializable {
     private String cartID;
 
-    private String uID;
-    private String deliveryStatus;
-    private String deliveryAddress;
-    private String paymentStatus;
+    private String productID;
+
 
 }

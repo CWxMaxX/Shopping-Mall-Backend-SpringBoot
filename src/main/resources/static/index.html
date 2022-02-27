@@ -3,9 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="postData.js" async></script>
 </head>
 <body>
 <h1>Home Page</h1>
 
+<label for="uid">UID = </label><input type="text" id="uid">
+<input type="button" value="Show User" id="showUser">
+<br>
+<br>
+<br>
+<input type="button" value="Show All" id="show">
+<div>
+    <p id="UserContainer"></p>
+</div>
+<hr>
+<br>
+<h1>Admin Registration</h1>
+<div style="width : 500px;display:flex;flex-direction: column">
+
+    <label for="adminId">Admin Id</label><input type="text" id="adminId"><br>
+    <label for="email">Email</label><input type="text" id="email"><br>
+    <label for="name">Name</label><input type="text" id="name"><br>
+    <label for="phoneNumber">Phone Number</label><input type="text" id="phoneNumber"><br>
+</div>
+<input type="button" value="Create Admin" id="createAdmin">
+
+<script>
+    let data ={
+        adminID:$("#adminId"),
+        name: $("#name"),
+        email :$("#email") ,
+        phoneNumber:$("#phoneNumber")
+    }
+    $("#createAdmin").click(function(){
+        $.post("https://webhook.site/10848308-de1e-423d-a4fb-5b4c7819acf5", data,
+            function(data, status){
+                alert("Data: " + data + "\nStatus: " + status);
+            });
+    });
+</script>
 </body>
 </html>
